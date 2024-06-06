@@ -1,0 +1,50 @@
+def add(x,y):
+    z = x + y
+    print(z)
+    return z
+
+
+def subtract(x,y):
+    z = x - y
+    print(z)
+    return z
+
+def multiply(x,y):
+    z = x * y
+    print(z)
+    return z
+
+def divide(x,y):
+    z = x / y
+    print(z)
+    return z
+
+
+
+
+def calculator():
+    keepUsingCalc = True
+    while keepUsingCalc == True:
+        num1 = int(input('Enter first number:'))
+        num2 = int(input('Enter second number:'))
+        operator = input('What operation would you like to perform: /n (*) multiply /n (+) addition /n (-) Subtract /n (/) divide: ')
+        if operator == '*':
+            multiply(num1, num2)
+        elif operator == '+':
+            add(num1,num2)
+        elif operator == '-':
+            subtract(num1, num2)
+        elif operator == '/': 
+            divide(num1,num2)
+            
+            
+        finished = input('would you like to continue using calculator. (y) yes, \n (n) no: ')
+        if finished == 'n':
+            keepUsingCalc = False
+            
+calculator()
+    
+    
+    
+
+
